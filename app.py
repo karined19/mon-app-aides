@@ -55,3 +55,21 @@ if reponse == "Oui":
     st.success("Tu pourrais être admissible au CIPH.")
 else:
     st.info("Ce critère (durée) pourrait être un obstacle pour l’instant.")
+if page == "Accueil":
+    st.title("Accueil")
+    st.write("Bienvenue dans ton assistant.")
+
+elif page == "Vérifier mon admissibilité":
+    st.title("Test rapide CIPH")
+
+    reponse = st.radio(
+        "Tes limitations durent-elles depuis plus de 12 mois ?",
+        ["Oui", "Non"]
+    )
+
+    if reponse == "Oui":
+        st.success("Tu pourrais être admissible.")
+
+elif page == "Ressources":
+    st.title("Ressources utiles")
+    st.write("Liste de spécialistes et d'organismes.")

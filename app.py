@@ -1,65 +1,40 @@
 import streamlit as st
 
-# ----- CSS -----
+# ---------- STYLE ----------
 st.markdown("""
 <style>
-
 .stApp {
-    background-color: #FFF6F8;
+    background-color: #F7F9FC;
 }
-}
-
 h1 {
     color: #6C63FF;
-    text-align: center;
 }
-
-.stButton > button {
-    border-radius: 12px;
-    background-color: #6C63FF;
-    color: white;
-    font-weight: bold;
-}
-
 </style>
 """, unsafe_allow_html=True)
+
+# ---------- MENU ----------
 page = st.sidebar.selectbox(
     "Navigation",
-    ["Accueil", "Vérifier mon admissibilité", "Ressources"]
+    ["Accueil", "Test CIPH", "Ressources"]
 )
 
-# ----- APP -----
-st.title("🧭 Mon assistant d'aides")
-
-st.write("Bienvenue dans ton prototype 🙂")
-
-name = st.text_input("Ton prénom")
-
-if name:
-    st.success(f"Bonjour {name} !")
-if st.button("Je ne sais pas par où commencer"):
-    st.write("➡️ Première étape: vérifier ton admissibilité au CIPH.")
-age = st.number_input("Quel âge as-tu ?", 0, 120)
-
-if age >= 18:
-    st.write("Tu es majeur.")
-st.write("### Vérification rapide")
-
-reponse = st.radio(
-    "Tes limitations durent-elles depuis plus de 12 mois ?",
-    ["Oui", "Non"]
-)
-st.write("### Vérification rapide")
-
-if reponse == "Oui":
-    st.success("Tu pourrais être admissible au CIPH.")
-else:
-    st.info("Ce critère (durée) pourrait être un obstacle pour l’instant.")
+# ---------- PAGE ACCUEIL ----------
 if page == "Accueil":
-    st.title("Accueil")
-    st.write("Bienvenue dans ton assistant.")
 
-elif page == "Vérifier mon admissibilité":
+    st.title("🧭 Assistant des aides pour le handicap")
+
+    st.write("""
+Bienvenue dans ton assistant.
+
+Cet outil t'aidera à:
+- comprendre les aides disponibles
+- vérifier ton admissibilité
+- trouver des ressources
+""")
+
+# ---------- PAGE TEST ----------
+elif page == "Test CIPH":
+
     st.title("Test rapide CIPH")
 
     reponse = st.radio(
@@ -68,8 +43,19 @@ elif page == "Vérifier mon admissibilité":
     )
 
     if reponse == "Oui":
-        st.success("Tu pourrais être admissible.")
+        st.success("Tu pourrais être admissible au CIPH.")
+    else:
+        st.warning("Ce critère pourrait être un obstacle.")
 
+# ---------- PAGE RESSOURCES ----------
 elif page == "Ressources":
+
     st.title("Ressources utiles")
-    st.write("Liste de spécialistes et d'organismes.")
+
+    st.write("""
+Voici quelques exemples de ressources:
+
+- Organismes d'aide
+- Médecins spécialisés
+- Informations IVAC
+""")

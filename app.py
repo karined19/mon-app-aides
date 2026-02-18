@@ -39,4 +39,13 @@ age = st.number_input("Quel âge as-tu ?", 0, 120)
 
 if age >= 18:
     st.write("Tu es majeur.")
+st.write("### Vérification rapide")
+
+reponse = st.radio(
+    "Tes limitations durent-elles depuis plus de 12 mois ?",
+    ["Oui", "Non"]
+)
+
+if reponse == "Oui":
+    st.success("Tu pourrais être admissible au CIPH.")
 

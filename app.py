@@ -48,4 +48,6 @@ reponse = st.radio(
 
 if reponse == "Oui":
     st.success("Tu pourrais être admissible au CIPH.")
+SI oui → afficher ceci
+SINON → afficher autre chose
 

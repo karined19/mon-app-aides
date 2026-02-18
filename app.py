@@ -19,18 +19,25 @@ page = st.sidebar.selectbox(
 )
 
 # ---------- PAGE ACCUEIL ----------
-if page == "Accueil":
+st.title("🧭 Votre guide des aides pour le handicap")
 
-    st.title("🧭 Assistant des aides pour le handicap")
-
-    st.write("""
-Bienvenue dans ton assistant.
-
-Cet outil t'aidera à:
-- comprendre les aides disponibles
-- vérifier ton admissibilité
-- trouver des ressources
+st.write("""
+Les démarches peuvent être longues et complexes.
+Cet outil vous aide à comprendre rapidement vos droits et les étapes à suivre.
 """)
+
+st.write("---")
+
+st.write("### Ce que vous pouvez faire ici:")
+
+st.write("""
+✔ Vérifier votre admissibilité au CIPH  
+✔ Comprendre les démarches administratives  
+✔ Trouver des ressources et spécialistes  
+""")
+
+if st.button("Commencer mon évaluation"):
+    st.session_state.page = "Test CIPH"
 
 # ---------- PAGE TEST ----------
 st.title("Test rapide CIPH")

@@ -47,9 +47,6 @@ reponse = st.radio(
 )
 st.write("### Vérification rapide")
 
-reponse = st.radio(
-    "Tes limitations durent-elles depuis plus de 12 mois ?",
-    ["Oui", "Non"]
 )
 
 if reponse == "Oui":

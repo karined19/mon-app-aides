@@ -35,4 +35,8 @@ if name:
     st.success(f"Bonjour {name} !")
 if st.button("Je ne sais pas par où commencer"):
     st.write("➡️ Première étape: vérifier ton admissibilité au CIPH.")
+age = st.number_input("Quel âge as-tu ?", 0, 120)
+
+if age >= 18:
+    st.write("Tu es majeur.")
 

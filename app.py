@@ -47,8 +47,6 @@ reponse = st.radio(
 )
 st.write("### Vérification rapide")
 
-)
-
 if reponse == "Oui":
     st.success("Tu pourrais être admissible au CIPH.")
 else:

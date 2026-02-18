@@ -33,3 +33,4 @@ name = st.text_input("Ton prénom")
 if name:
     st.success(f"Bonjour {name} !")
 
+background-color: #FFF6F8;

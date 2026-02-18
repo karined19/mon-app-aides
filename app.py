@@ -5,7 +5,8 @@ st.markdown("""
 <style>
 
 body {
-    background-color: #f7f9fc;
+    background-color: #FFF6F8;
+
 }
 
 h1 {
@@ -33,4 +34,4 @@ name = st.text_input("Ton prénom")
 if name:
     st.success(f"Bonjour {name} !")
 
-background-color: #FFF6F8;
+

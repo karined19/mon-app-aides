@@ -45,7 +45,6 @@ reponse = st.radio(
     "Tes limitations durent-elles depuis plus de 12 mois ?",
     ["Oui", "Non"]
 )
-
 if reponse == "Oui":
     st.success("Tu pourrais être admissible au CIPH.")
 SI oui → afficher ceci

@@ -45,8 +45,14 @@ reponse = st.radio(
     "Tes limitations durent-elles depuis plus de 12 mois ?",
     ["Oui", "Non"]
 )
+st.write("### Vérification rapide")
+
+reponse = st.radio(
+    "Tes limitations durent-elles depuis plus de 12 mois ?",
+    ["Oui", "Non"]
+)
+
 if reponse == "Oui":
     st.success("Tu pourrais être admissible au CIPH.")
-SI oui → afficher ceci
-SINON → afficher autre chose
-
+else:
+    st.info("Ce critère (durée) pourrait être un obstacle pour l’instant.")

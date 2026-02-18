@@ -4,9 +4,9 @@ import streamlit as st
 st.markdown("""
 <style>
 
-body {
-    background-color: #F7F9FC;
-
+.stApp {
+    background-color: #FFF6F8;
+}
 }
 
 h1 {

@@ -33,11 +33,6 @@ name = st.text_input("Ton prénom")
 
 if name:
     st.success(f"Bonjour {name} !")
-Titre: Je ne sais pas par où commencer
-
-Bouton: Vérifier mon admissibilité CIPH
-
-→ affiche 4 questions simples
-→ affiche résultat immédiat
-
+if st.button("Je ne sais pas par où commencer"):
+    st.write("➡️ Première étape: vérifier ton admissibilité au CIPH.")
 

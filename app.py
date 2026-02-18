@@ -23,6 +23,10 @@ h1 {
 
 </style>
 """, unsafe_allow_html=True)
+page = st.sidebar.selectbox(
+    "Navigation",
+    ["Accueil", "Vérifier mon admissibilité", "Ressources"]
+)
 
 # ----- APP -----
 st.title("🧭 Mon assistant d'aides")
